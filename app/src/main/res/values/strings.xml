@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Week3Day4-ContentProvider</string>
+    <string name="cnt_pokemon_image">Pokemon Image</string>
+    <string name="atk">Atk</string>
+    <string name="hp" tools:ignore="ExtraTranslation">HP</string>
+    <string name="def">Def</string>
+</resources>

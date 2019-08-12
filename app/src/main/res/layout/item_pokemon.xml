@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/ivPicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/cnt_pokemon_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/ivPicture"
+        app:layout_constraintTop_toTopOf="@id/ivPicture" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvId"
+        app:layout_constraintTop_toTopOf="@id/ivPicture" />
+
+    <TextView
+        android:id="@+id/tvAttack"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:padding="5dp"
+        android:text="@string/atk"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivPicture"
+        app:layout_constraintStart_toEndOf="@id/ivPicture" />
+
+    <TextView
+        android:id="@+id/tvAttackNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tvAttack"
+        app:layout_constraintEnd_toEndOf="@id/tvAttack"
+        app:layout_constraintBottom_toTopOf="@id/tvAttack"
+        android:padding="5dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvDefense"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/hp"
+        android:textColor="@color/blue"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@id/tvAttack"
+        app:layout_constraintEnd_toStartOf="@id/tvHp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivPicture"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDefenseNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tvDefense"
+        app:layout_constraintEnd_toEndOf="@id/tvDefense"
+        app:layout_constraintBottom_toTopOf="@id/tvDefense"
+        android:padding="5dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvHp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/def"
+        android:padding="5dp"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivPicture"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHpNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tvHp"
+        app:layout_constraintEnd_toEndOf="@id/tvHp"
+        app:layout_constraintBottom_toTopOf="@id/tvHp"
+        android:padding="5dp"
+        android:textSize="16sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
