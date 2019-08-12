@@ -32,7 +32,7 @@ public class PokeList extends AppCompatActivity {
     }
 
     public void getPokemonWithContentProvider() {
-        Cursor cursor = getContentResolver().query(CONTENT_URI,  COLS, null, null, null);
+        Cursor cursor = getContentResolver().query(CONTENT_URI,  COLS, null, null, COL_ID + " ASC");
         if (cursor != null) {
             ArrayList<Pokemon> pokeList = new ArrayList<>();
             while (cursor.moveToNext()) {

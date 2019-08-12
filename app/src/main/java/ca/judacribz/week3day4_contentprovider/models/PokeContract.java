@@ -26,7 +26,8 @@ public class PokeContract {
     };
 
     public static final String DROP_TABLE_QUERY = "DROP TABLE " + TABLE_NAME;
-    public static final String SELECT_ALL_POKEMON = "SELECT * FROM " + TABLE_NAME;
+    public static final String SELECT_ALL_POKEMON =
+            String.format("SELECT * FROM %s ORDER BY %s ASC", TABLE_NAME, COL_ID);
 
 
     public static String getCreateTableQuery() {
@@ -50,6 +51,16 @@ public class PokeContract {
                 TABLE_NAME,
                 COL_ID,
                 id
+        );
+    }
+
+    public static String getPokemonByNameQuery(String name) {
+        return String.format(
+                Locale.US,
+                "SELECT * FROM %s WHERE %s = \'%s\'",
+                TABLE_NAME,
+                COL_NAME,
+                name
         );
     }
 }

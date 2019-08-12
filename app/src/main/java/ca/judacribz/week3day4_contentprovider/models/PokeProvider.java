@@ -49,7 +49,7 @@ public class PokeProvider extends ContentProvider {
                         sortOrder
                 );
                 break;
-            default:
+            case POKEMON:
                 retCursor = db.query(
                         TABLE_NAME,
                         projection,

@@ -43,7 +43,7 @@ public class PokeHelper extends SQLiteOpenHelper implements
 
     /* Create --------------------------------------------------------------------------------- */
     public void insertPokemon(Pokemon pokemon) {
-        if (getPokemonById(pokemon.getId()) == null) {
+        if (getPokemonByName(pokemon.getName()) == null) {
 
             SQLiteDatabase database = this.getWritableDatabase();
 
@@ -89,6 +89,20 @@ public class PokeHelper extends SQLiteOpenHelper implements
         cursor.close();
         return Pokemon;
     }
+
+    public Pokemon getPokemonByName(String name) {
+        SQLiteDatabase readableDatabase = this.getReadableDatabase();
+        Pokemon Pokemon = null;
+
+        Cursor cursor = readableDatabase.rawQuery(getPokemonByNameQuery(name), null);
+
+        if (cursor.moveToFirst()) {
+            Pokemon = getPokemon(cursor, -1);
+        }
+        cursor.close();
+        return Pokemon;
+    }
+
 
     /* Update --------------------------------------------------------------------------------- */
     public void updatePokemon(Pokemon Pokemon) {

@@ -1,6 +1,7 @@
 # Week3Day4-ContentProvider
 
 Distinguish between dynamic and static for fragments
+Static fragments are declared in the xml layout file while dynamic fragments are added through code using fragment manager to insert into a container view group.
 
 1. Create a a custom content provider with an underlying SQL database(Create any database with at least 5 columns and 10 rows). 
 Then retrieve data from that content provider and populate the recyclerView

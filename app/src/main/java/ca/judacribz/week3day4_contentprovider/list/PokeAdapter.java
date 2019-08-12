@@ -68,7 +68,7 @@ public class PokeAdapter extends RecyclerView.Adapter<PokeViewHolder> {
             tvName.setText(pokemon.getName());
             tvAttackNum.setText(String.valueOf(pokemon.getAttack()));
             tvDefenseNum.setText(String.valueOf(pokemon.getDefense()));
-            tvHpNum.setText(String.valueOf(pokemon.getHp()));
+            tvHpNum.setText(new StringBuilder("#").append(pokemon.getHp()).toString());
         }
     }
 }

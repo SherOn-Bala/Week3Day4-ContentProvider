@@ -6,9 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
+    <fragment
+        android:id="@+id/fmtPokemon"
+        android:name="ca.judacribz.week3day4_contentprovider.master_detail_flow.PokeFragment"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
         android:id="@+id/btnPokeList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:onClick="seePokemon" />
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cnt_pikachu_icon"
+        android:onClick="seePokemon"
+        android:src="@drawable/ic_pikachu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fmtPokemon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

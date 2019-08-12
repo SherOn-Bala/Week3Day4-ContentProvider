@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
+import androidx.annotation.Nullable;
+
 import java.io.ByteArrayOutputStream;
 
 import ca.judacribz.week3day4_contentprovider.models.Pokemon;
@@ -30,7 +32,7 @@ public class Util {
 
     public static Pokemon getPokemon(Cursor cursor, int id) {
         return new Pokemon(
-                id,
+                id != -1 ? id : cursor.getInt(cursor.getColumnIndex(COL_ID)),
                 cursor.getString(cursor.getColumnIndex(COL_NAME)),
                 getBitmapFromBase64(cursor.getString(cursor.getColumnIndex(COL_PICTURE))),
                 cursor.getInt(cursor.getColumnIndex(COL_ATTACK)),

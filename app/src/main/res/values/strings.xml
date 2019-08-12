@@ -4,4 +4,10 @@
     <string name="atk">Atk</string>
     <string name="hp" tools:ignore="ExtraTranslation">HP</string>
     <string name="def">Def</string>
+    <string name="cnt_pikachu_icon">Pikachu Icon</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_pokemon_list">poke list</string>
+    <string name="title_pokemon_detail">pokemon Detail</string>
 </resources>
